@@ -17,19 +17,6 @@ table{border-collapse:collapse;border-spacing:0}
 hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
 input,select{vertical-align:middle}
 
-
-
-@media screen and  (min-width:360px){
-	section .head_seccion h6{
-		font-size: 3.4em!important;
-	}
-
-	nav div ul li a{
-		font-size: 0.9em!important;
-	}
-}
-
-
 // FUENTE
 @import url(https://fonts.googleapis.com/css?family=Ubuntu);
 // FIN FUENTE
@@ -89,6 +76,27 @@ body{font-family: 'Ubuntu';}
 	text-align: center;
 	margin: 30px 0 0 0;
 }
+
+
+// MENU
+.cont_menu{
+	min-height: 55px;
+	max-height: 55px;
+	width: 100%;
+	background-image: url('../img/fondo_barra_menu.png');
+	// background-color: @plomo;
+	// border-top: 1px solid #FFF;
+	vertical-align: bottom;
+	// opacity: 0.7;
+ 	position: absolute;
+	bottom:0px;
+	right:0px;
+	color: #FFF;
+	vertical-align: middle;
+	font-size: 1.2em;
+	padding-top: 17px;
+}
+
 .menu{
 	min-height: 55px;
 	max-height: 55px;
@@ -105,14 +113,10 @@ body{font-family: 'Ubuntu';}
 	vertical-align: middle;
 	font-size: 1.2em;
 	padding-top: 17px;
-	overflow: hidden;
 }
 
+.lista_menu {
 
-nav ul{
-	display: table;
-	position: relative;
-	background:#000;
 }
 
 nav ul li {
@@ -128,6 +132,7 @@ nav ul li a{
 nav ul li a:hover{
 	color: #FFF;
 	text-decoration: none;
+	border-bottom: 4px solid #000;
 }
 
 nav ul li a:active {
@@ -140,26 +145,12 @@ nav ul li a:visited {
 	text-decoration: none;
 }
 
-nav > ul > li > a span{
-	width: 100%;
-	height: 100%;
-	background-color: @plomo;
-	display: block;
-	position: absolute;
-	left: 0;
-	top: -70px;
-}
-
-.spanover1{
-	background-color: red;
-}
-
 .isotipo{
-	margin-top: -9px;
-	margin-left: 10px;
+	margin-top: -9px!important;
+	margin-left: 10px!important;
 }
 
-.isotipo>img{
+.isotipo>a>img{
 	
 	height: 35px;
 	width: auto;
@@ -168,7 +159,7 @@ nav > ul > li > a span{
 
 
 .bg1_seccion2{
-	height: 828px;
+	// height: 828px;
 	background-image: url('../img/pc.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -178,7 +169,7 @@ nav > ul > li > a span{
 
 
 .seccion_cont1{
-	.fondo_secciones(828px,'../img/bg_seccion1.png')
+	.fondo_secciones("",'../img/bg_seccion1.png');
 	// height: 828px;
 	// background-image: url('../img/bg_seccion1.png');
 	// background-size: cover;
@@ -188,26 +179,26 @@ nav > ul > li > a span{
 }
 
 .seccion_cont2{
-	height: 828px;
-	background-image: url('../img/bg_seccion2.png');
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-attachment: fixed;
-
+	// height: 828px;
+	.fondo_secciones( "",'../img/bg_seccion2.png');
 }
 
 .seccion_cont3{
-	height: 828px;
-	background-image: url('../img/bg_seccion3.png');
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-attachment: fixed;
+	.fondo_secciones( "",'../img/bg_seccion3.png');
+	// height: 828px;
+	// background-image: url('../img/bg_seccion3.png');
+	// background-size: cover;
+	// background-repeat: no-repeat;
+	// background-position: center;
+	// background-attachment: fixed;
 
 }
 
-.carousel-indicators{
+
+    /* Por debajo de 700px */
+
+
+.carousel-indicators li{
 	color: @plomo!important;
 }
 
@@ -234,6 +225,37 @@ nav > ul > li > a span{
 	display: block;
 }
 
+
+@media screen and (min-width: 700px){
+	.link_menu li a{
+		padding: 16px 16px 16px 16px;
+	}
+}
+
+@media screen and (max-width: 360px){
+	.head_seccion {
+		padding-top: 50px!important;
+	}
+	
+	.parrafo_peq{
+		padding-bottom: 50px;
+	}
+
+
+	.head_seccion h6{
+		font-size: 3em;
+		// color: red;
+	}
+	nav .lista_menu ul li a{
+		font-size: 0.7em!important;
+	}
+	
+	.parrafo_peq p{
+		// font-size: 0.7em!important;
+	}
+
+}
+
 .head_seccion h4{
 	padding-top: 20px;
 	font-size: 2em;
@@ -244,10 +266,13 @@ nav > ul > li > a span{
 
 .servicios_webs_cont{
 	padding-top: 100px;
+	// padding-bottom: 40px;
+	// height: 100%;
 }
 
 .item_serv{
 	text-align: center;
+	margin: 0 auto;
 }
 
 .item_serv p{
@@ -258,4 +283,3 @@ nav > ul > li > a span{
 #item_corp, #item_shop, #item_port{
 	display: none;
 }
-
