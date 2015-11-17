@@ -20,6 +20,8 @@ input,select{vertical-align:middle}
 // FUENTE
 @import url(https://fonts.googleapis.com/css?family=Ubuntu);
 // FIN FUENTE
+@import "elements.less";
+
 body{font-family: 'Ubuntu';}
 
 
@@ -77,6 +79,18 @@ body{font-family: 'Ubuntu';}
 	margin: 30px 0 0 0;
 }
 
+.isotipo{
+
+	padding-top: 10px;
+}
+
+.isotipo>a>img{
+	
+	height: 35px;
+	width: auto;
+
+}
+
 
 // MENU
 .cont_menu{
@@ -112,50 +126,74 @@ body{font-family: 'Ubuntu';}
 	color: #FFF;
 	vertical-align: middle;
 	font-size: 1.2em;
-	padding-top: 17px;
+	// padding-top: 17px;
 }
 
 .lista_menu {
 
 }
 
-nav ul li {
-	display: table-cell;
+.lista_menu >ul {
+	display: table;
+	//width: 100%;
+	position: relative;
 }
 
-nav ul li a{
+.lista_menu> ul li {
+	display: table-cell;
+	overflow: hidden;
+}
+
+.lista_menu> ul li a{
 	color: #FFF!important;
 	text-decoration: none!important;
-	padding: 16px 0 16px 0;
+	//padding: 17px 0 17px 0;
+	display: block;
+	height: 100%;
+	line-height: 20px;
+	text-align: center;
+	padding: 17px;
+	position: relative;
+	.transition-duration(0.2s);
+	// .transition-duration(0.2s);
 }
 
-nav ul li a:hover{
+.lista_menu> ul> li> a span{
+	background: #174459;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	top:-50px;
+	display: block;
+	line-height: 60px;
+	.transition-duration(0.2s);
+}
+
+.lista_menu> ul> li> a:hover >span{
+	top: 0;
+	.transition-duration(0.2s);
+}
+
+ .lista_menu ul li a:hover{
 	color: #FFF;
 	text-decoration: none;
-	border-bottom: 4px solid #000;
+	// border-bottom: 5px solid #000;
 }
 
-nav ul li a:active {
+ .lista_menu ul li a:active {
 	color: #FFF!important;
 	text-decoration: none;
 }
 
-nav ul li a:visited {
+ .lista_menu ul li a:visited {
 	color: #FFF!important;
 	text-decoration: none;
 }
+// MENU
 
-.isotipo{
-	margin-top: -9px!important;
-	margin-left: 10px!important;
-}
 
-.isotipo>a>img{
-	
-	height: 35px;
-	width: auto;
 
-}
 
 
 .bg1_seccion2{
@@ -228,7 +266,9 @@ nav ul li a:visited {
 
 @media screen and (min-width: 700px){
 	.link_menu li a{
-		padding: 16px 16px 16px 16px;
+		// padding: 16px 16px 16px 16px;
+		display: block;
+		height: 100%;
 	}
 }
 
@@ -266,9 +306,9 @@ nav ul li a:visited {
 }
 
 ul li a .spanover{
-	position: absolute;
-	background: #000;
-	width: 100%;
+	// position: absolute;
+	// background: #000;
+	// width: 100%;
 }
 
 .head_seccion h4{
