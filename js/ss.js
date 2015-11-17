@@ -29,6 +29,7 @@ $(window).on('scroll',function(){
 });
 
 
+
     $('h2').append('<a href="#top" class="gototop">Subir</a>');
     linkInterno = $('a[href^="#"]');
     linkInterno.on('click',function(e) {
@@ -89,6 +90,7 @@ $(window).on('scroll',function(){
         'min-height':altpantalla+'px'
         // });
     });
+
 
 
 });
