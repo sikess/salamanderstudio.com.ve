@@ -30,7 +30,7 @@
 						</div>
 						<div class="lista_menu col-xs-10 col-md-8 col-sm-8 col-lg-8">
 							<ul class="link_menu list-inline pull-right">
-								<li><a id="aa"	href="#a"><span class="spanover bg_link_span_menu_azul"></span>Web</a></li>
+								<li><a id="aa"	href="#a"><span class="spanover azul bg_link_span_menu_azul"></span>Web</a></li>
 								<li><a href="#b"><span class="spanover bg_link_span_menu_verde"></span>App</a></li>
 								<li><a href="#c"><span class="spanover bg_link_span_menu_naranja"></span>Cotacto</a></li>
 								<li><a href=""><span class="spanover bg_link_span_menu_rojo"></span>Portafolio</a></li>
@@ -199,6 +199,12 @@ $(function () {
 })
 
 </script>
-
+<script>
+$( "#aa" ).click(function() {
+  $('.azul').css({
+    		'top':'40px!important'
+    	});
+});
+</script>
 </body>
 </html>
