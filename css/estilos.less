@@ -261,8 +261,8 @@ body{font-family: 'Ubuntu';}
     /* Por debajo de 700px */
 
 
-.carousel-indicators li{
-	color: @plomo!important;
+.carousel-indicators  {
+	display: none;
 }
 
 .seccion_right_menu{
@@ -344,7 +344,46 @@ ul li a .spanover{
 	}
 }
 
+.formulario{
+	padding-top: 60px;
+	color: #FFF;
 
+}
+
+.mapa{
+	padding-top: 100px;
+}
+
+
+.cont_cantacto input[type="email"], input[type="text"], input[type="file"], input[type="email"]{
+    width: 100% !important;
+    height: 40px !important;
+    // .el_radio() !important;
+    border: 0 !important;
+    padding: 8px !important;
+    font-size: 1em !important;
+    color: @plomo;
+    // border: solid 1px @rojo !important;
+    // font-family:Arial, Helvetica, sans-serif;
+}
+
+ textarea{
+ 	width: 100% !important;
+    border: 0 !important;
+    padding: 8px !important;
+    font-size: 1em !important;
+    color: @plomo;
+    // border: solid 1px @rojo !important;
+    // font-family:Arial, Helvetica, sans-serif;
+ }
+
+.comapo_cont{
+	p {
+		padding: 5px 5px 5px 0;
+	}
+	padding: 10px;
+
+}
 
 // MEDIA QUERIS
 @media screen and (max-width: 360px){
