@@ -289,50 +289,7 @@ body{font-family: 'Ubuntu';}
 }
 
 
-@media screen and (min-width: 700px){
-	.link_menu li a{
-		padding: 17px 17px 17px 17px!important;
-		display: block;
-		height: 100%;
-	}
-}
 
-@media screen and (max-width: 360px){
-
-	.isotipo img{
-		margin-left: 5px!important;
-	}
-
-	.head_seccion h6{
-		padding-top: 30px!important;
-	}
-
-	.head_seccion {
-		padding-top: 30px!important;
-
-	}
-	
-	.parrafo_peq{
-		padding-bottom: 50px;
-	}
-
-
-	.head_seccion h6{
-		font-size: 3em;
-		// color: red;
-	}
-	nav .lista_menu ul li a{
-		font-size: 0.8em!important;
-		overflow: hidden;
-	}
-	
-	.parrafo_peq p{
-		font-size: 0.9em!important;
-		line-height: 20px;
-		text-align: justify;
-	}
-
-}
 
 ul li a .spanover{
 	// position: absolute;
@@ -365,11 +322,68 @@ ul li a .spanover{
 	.formato_texto(#FFF,1.3em,center);
 }
 
-#item_corp, #item_shop, #item_port{
-	display: none;
+#item_corp img, #item_shop img, #item_port img{
+	// display: none;
+	margin-top:0;
 	.transition-duration(0.2s);
 }
 
-#item_corp:hover{
+
+
+#item_corp img:hover, #item_shop img:hover, #item_port img:hover{
+	margin-top: -50px;
+	cursor: pointer;
 	.transition-duration(0.2s);
+}
+
+@media screen and (min-width: 700px){
+	.link_menu li a{
+		padding: 17px 17px 17px 17px!important;
+		display: block;
+		height: 100%;
+	}
+}
+
+
+
+// MEDIA QUERIS
+@media screen and (max-width: 360px){
+
+	.servicios_webs_cont{
+		padding-top: 60px!important;
+	}
+
+	.isotipo img{
+		margin-left: 5px!important;
+	}
+
+	.head_seccion h6{
+		padding-top: 30px!important;
+	}
+
+	.head_seccion {
+		padding-top: 20px!important;
+
+	}
+	
+	.parrafo_peq{
+		padding-bottom: 50px;
+	}
+
+
+	.head_seccion h6{
+		font-size: 3em;
+		// color: red;
+	}
+	nav .lista_menu ul li a{
+		font-size: 0.8em!important;
+		overflow: hidden;
+	}
+	
+	.parrafo_peq p{
+		font-size: 1.2em!important;
+		line-height: 20px;
+		text-align: justify;
+	}
+
 }

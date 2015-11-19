@@ -20,11 +20,12 @@ $(window).on('scroll',function(){
          $("#item_corp").fadeIn();
          $("#item_shop").fadeIn("slow");
          $("#item_port").fadeIn(1000);
-    }else{
-        $("#item_corp").fadeOut();
-        $("#item_shop").fadeOut();
-        $("#item_port").fadeOut();
     }
+    // else{
+    //     $("#item_corp").fadeOut();
+    //     $("#item_shop").fadeOut();
+    //     $("#item_port").fadeOut();
+    // }
 
 });
 
