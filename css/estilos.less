@@ -18,7 +18,7 @@ hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padd
 input,select{vertical-align:middle}
 
 // FUENTE
-// @import url(https://fonts.googleapis.com/css?family=Ubuntu);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu);
 // FIN FUENTE
 @import "elements.less";
 @import "bootstrap.min.css";
@@ -406,7 +406,8 @@ ul li a .spanover{
 
 .foot_cont{
 	position: relative;
-	padding: 30px 0 30px 0;height: 300px;
+	padding: 30px 0 30px 0;
+	height: 400px;
 }
 
 
@@ -418,6 +419,25 @@ ul li a .spanover{
 	height: 31px;
 }
 
+.contacto{
+	color: #BDBDBD;
+	line-height: 25px;
+	padding: 50px 0 0 0;
+
+}
+
+.contacto ul{
+	list-style: none;
+}
+
+.contacto>ul>li>h3{
+	color: #BDBDBD;
+	font-weight: bold;
+}
+
+.contacto ul li i{
+	padding: 0 6px 0 0;
+}
 
 // MEDIA QUERIS
 @media screen and (max-width: 360px){
@@ -466,11 +486,15 @@ ul li a .spanover{
 	.parrafo_peq p{
 		font-size: 1.2em!important;
 		line-height: 20px;
-		text-align: justify;
+		text-align: center;
 	}
 	
 	.mapa p{
 		font-size: 0.9em!important;
+	}
+
+	.contacto{
+		text-align: center;
 	}
 }
 
