@@ -92,7 +92,7 @@ $(window).on('scroll',function(){
         // });
     });
 
-
+      // alert(altpantalla);
 
 });
 
