@@ -1,12 +1,19 @@
+var anchoPantalla=$(window).width();
+var altoPantalla=$(window).height();
+function main(){
+
+}
+
+// Menu Flotante
 $(document).ready(function(){
 	var altura=$('.menu').offset().top;
 	$(window).on('scroll', function(){
 		if($(window).scrollTop()>altura){
 			$('.menu').addClass('menu-fixed');
-			$('.isotipo').removeClass('hide');
+			// $('.isotipo').removeClass('hide');
 		}else{
 			$('.menu').removeClass('menu-fixed');
-			$('.isotipo').addClass('hide');
+			// $('.isotipo').addClass('hide');
 		}
 	});
 
@@ -15,30 +22,50 @@ $(document).ready(function(){
 
 var altura2=$('.seccion_cont1').offset().top;
 var alturaseca=altura2-40;
+var play=0;
 $(window).on('scroll',function(){
     if($(window).scrollTop()>alturaseca){
-         $("#item_corp").fadeIn();
-         $("#item_shop").fadeIn("slow");
-         $("#item_port").fadeIn(1000);
+         $("#item_corp").fadeIn('slow');
+         $("#item_shop").fadeIn('slow');
+         $("#item_port").fadeIn('slow');
+
+         // $('#item_corp').addClass('menu-fixed');
+         if(play==0){
+           $("#item_corp").animate({'top': '-100px'}, 1000); 
+           $("#item_shop").animate({'top': '-100px'},'slow'); 
+           $("#item_port").animate({'top': '-100px'}, 1000); 
+
+           play=1;
+         }
+          
     }
     // else{
     //     $("#item_corp").fadeOut();
     //     $("#item_shop").fadeOut();
     //     $("#item_port").fadeOut();
     // }
-
+//     $("#Friends").fadeIn('slow',function(){
+//   $(this).animate({'top': '-=30px'},'slow');
+// });
 });
 
 
 
-    $('h2').append('<a href="#top" class="gototop">Subir</a>');
-    linkInterno = $('a[href^="#"]');
-    linkInterno.on('click',function(e) {
+// $('h2').append('<a href="#top" class="gototop">Subir</a>');
+linkInterno = $('a[href^="#"]');
+linkInterno.on('click',function(e) {
+
 	e.preventDefault();
 	var href = $(this).attr('href');
 	// alert(href);
-	$('html, body').animate({ scrollTop : $( href ).offset().top }, 'slow', 'easeInOutExpo');
-	});
+    $('html, body').animate({ scrollTop : $( href ).offset().top }, 'slow', 'easeInOutExpo'); 
+// if(anchoPantalla<=650){
+//     $('html, body').animate({ scrollTop : $( href ).offset().top-140 }, 'slow', 'easeInOutExpo');
+// }else{
+//  $('html, body').animate({ scrollTop : $( href ).offset().top }, 'slow', 'easeInOutExpo');   
+// }
+	
+});
 
     $(window).scroll(function(){
     	var barra=$(window).scrollTop();
@@ -77,7 +104,7 @@ $(window).on('scroll',function(){
         // });
     });
 
-        $('.bg1_seccion2').css({
+        $('.seccion_cont1').css({
         'min-height':altpantalla+'px'
         // });
     });
@@ -97,3 +124,6 @@ $(window).on('scroll',function(){
 });
 
 
+   $('#aa').click(function(){
+        // alert(anchoPantalla);
+    });
