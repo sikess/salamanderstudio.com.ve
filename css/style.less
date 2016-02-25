@@ -120,11 +120,12 @@ body{font-family: 'Ubuntu';}
 	background-attachment: fixed;
 }
 
-.fondo_img_clase(@elurl, @posicion, @repeat,@elsize){
+.fondo_img_clase(@elurl, @posicion, @repeat,@elsize,@opacidad){
 	background-image: url(@elurl);
 	background-position: @posicion;
 	background-repeat: @repeat;
 	background-size: @elsize;
+	opacity: @opacidad;
 }
 // .MIX FONDOS
 
@@ -167,7 +168,7 @@ a{
 	position: relative;
 	min-height:auto;
 	// .fondo_img_clase(@elurl, @posicion, @repeat,@elsize)
-	.fondo_img_clase("../img/cont_head_slider.png",50% 50%,no-repeat,cover);
+	.fondo_img_clase("../img/cont_head_slider.png",50% 50%,no-repeat,cover,"");
 }
 
 .secciones_top{
@@ -350,7 +351,7 @@ a{
 	position: absolute;
 	bottom: 0;
 	// .fondo_img_clase(@elurl, @posicion, @repeat,@elsize)
-	.fondo_img_clase("../img/cenefa_geometrica.png",50% 50%,no-repeat,cover);
+	.fondo_img_clase("../img/cenefa_geometrica.png",50% 50%,no-repeat,cover,"");
 }
 
 
@@ -372,29 +373,29 @@ a{
 
 .bg_pie_web{
 	.bg_pie_;
-	.fondo_img_clase("../img/bg_pie_web.png","",repeat-x,"");
+	.fondo_img_clase("../img/bg_pie_web.png","",repeat-x,"","");
 }
 
 .bg_pie_app{
 	.bg_pie_;
-	.fondo_img_clase("../img/bg_pie_app.png","",repeat-x,"");
+	.fondo_img_clase("../img/bg_pie_app.png","",repeat-x,"","");
 }
 
 .bg_pie_contact{
 	.bg_pie_;
-	.fondo_img_clase("../img/bg_pie_contact.png","",repeat-x,"");
+	.fondo_img_clase("../img/bg_pie_contact.png","",repeat-x,"","");
 }
-
+@opacidad:0.6;
 .bg_head_section{
-	.fondo_img_clase("../img/fondo_head_section.jpg",50% 50%,repeat-x,"");
+	.fondo_img_clase("../img/fondo_head_section.jpg",50% 50%,repeat-x,"",@opacidad);
 }
 
 .bg_head_section_verde{
-	.fondo_img_clase("../img/fondo_head_section_verde.jpg",50% 50%,repeat-x,"");
+	.fondo_img_clase("../img/fondo_head_section_verde.jpg",50% 50%,repeat-x,"",@opacidad);
 }
 
 .bg_head_section_naranja{
-	.fondo_img_clase("../img/fondo_head_section_naranja.jpg",50% 50%,repeat-x,"");
+	.fondo_img_clase("../img/fondo_head_section_naranja.jpg",50% 50%,repeat-x,"",@opacidad);
 }
 
 
@@ -777,7 +778,7 @@ iframe{
 	margin-left: 0;
 }
 .menu{
-	.fondo_img_clase("../img/fcenefa_geometrica3.jpg", "" ,no-repeat,"");
+	.fondo_img_clase("../img/fcenefa_geometrica3.jpg", "" ,no-repeat,"","");
 	 .transparencia_negro(0.6);
 	 background-position:bottom;
 	 // margin-bottom: -50px;
@@ -789,6 +790,11 @@ iframe{
 
 
 @media screen and (max-width: 500px){
+
+// .cont_items_menu{
+// 	display: block;
+// }
+
 .mapa, .formulario{
 	padding: 5px;
 }
@@ -801,10 +807,10 @@ iframe{
 }
 
 .cont_menu_slider{
-	min-height: auto;
+	min-height: 140px;
 	}
 
-.cont_slider{
+#cont_slidera{
 	display: none;
 }
 
@@ -822,8 +828,8 @@ iframe{
 }
 
 .cont_items_menu{
-	padding-left:0;
-	padding-right: 0;
+	// padding-left:0;
+	// padding-right: 0;
 }
 
 .nav_men  ul{
@@ -836,7 +842,7 @@ iframe{
 }
 
 .menu{
-	.fondo_img_clase("../img/cenefa_geometrica2.jpg", "" ,no-repeat,"");
+	.fondo_img_clase("../img/cenefa_geometrica2.jpg", "" ,no-repeat,"","");
 	 .transparencia_negro(0.6);
 	 background-position:bottom;
 	 margin-bottom: -50px;
