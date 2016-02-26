@@ -19,6 +19,11 @@ input,select{vertical-align:middle}
 
 // FUENTE
 @import url(https://fonts.googleapis.com/css?family=Ubuntu);
+@font-face {
+     font-family: 'FontAwesome';
+     src: url('../font/fonts/fontawesome-webfont.eot?v=3.2.1');
+     src: url('../font/fonts/fontawesome-webfont.eot?#iefix&v=3.2.1') format('embedded-opentype'), url('../Font/fontawesome-webfont.woff?v=3.2.1') format('woff'), url('../Font/fontawesome-webfont.ttf?v=3.2.1') format('truetype'), url('../Font/fontawesome-webfont.svg#fontawesomeregular?v=3.2.1') format('svg');
+ }
 // FIN FUENTE
 @import "elements.less";
 @import "bootstrap.min.css";
@@ -385,7 +390,7 @@ a{
 	.bg_pie_;
 	.fondo_img_clase("../img/bg_pie_contact.png","",repeat-x,"","");
 }
-@opacidad:0.6;
+@opacidad:0.7;
 .bg_head_section{
 	.fondo_img_clase("../img/fondo_head_section.jpg",50% 50%,repeat-x,"",@opacidad);
 }
@@ -397,7 +402,6 @@ a{
 .bg_head_section_naranja{
 	.fondo_img_clase("../img/fondo_head_section_naranja.jpg",50% 50%,repeat-x,"",@opacidad);
 }
-
 
 .head_seccion{
 	// background-color: @azul;
@@ -559,6 +563,18 @@ a{
 	color: @plomo;
 }
 
+.icono_form_field{
+	position: absolute;
+	// left: 0;
+	width: 40px;
+	height: 40px;
+	padding-top: 10px;
+	background-color: #EAEAEA;
+	z-index: 3;
+	text-align: center;
+	vertical-align: middle;
+}
+
 .mapa ul li{
 	list-style: none;
 }
@@ -581,6 +597,20 @@ iframe{
 	padding-top: 10px;
 }
 
+
+.cont_cantacto input[type="text"] {
+    position: relative;
+}
+
+.cont_cantacto input[type="text"]:before {
+    font-family: 'FontAwesome';
+    position: absolute;
+    top: 0px;
+    left: -5px;
+    content: "\f007";
+}
+
+
 .cont_cantacto input[type="email"], input[type="text"], input[type="file"], input[type="email"]{
     width: 100% !important;
     height: 40px !important;
@@ -590,6 +620,7 @@ iframe{
     font-size: 1em !important;
     color: @plomo;
     background-color: rgba(255, 255, 255, 0.7);
+    padding-left:35px!important;
     // border: 1px solid @plomo!important;
     // border: solid 1px @rojo !important;
     // font-family:Arial, Helvetica, sans-serif;
@@ -625,6 +656,8 @@ iframe{
 }
 
 .comapo_cont{
+	// position: relative;
+	display: block;
 	p {
 		padding: 5px 5px 5px 0;
 	}
